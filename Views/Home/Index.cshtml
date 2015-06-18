@@ -1,0 +1,49 @@
+﻿
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/jquery.min.js"></script>
+<script src="~/Scripts/jssor.slider.min.js"></script>
+<script>
+    jQuery(document).ready(function ($) {
+        var options = { $AutoPlay: true };
+        var jssor_slider1 = new $JssorSlider$('slider1_container', options);
+    });
+</script>
+
+
+    <div class="col-md-3">
+        <div class="list-group">
+
+      <div style="background-color:black;" class="list-group-item"><font color="white">Now Showing</font></div>
+            <div class="list-group-item">Fast And Furious 7 </div>
+            <div class="list-group-item">Game Of Thrones</div> 
+            <div class="list-group-item">John Carter</div> 
+            <div class="list-group-item">Divergent</div> 
+            <div class="list-group-item">Faster</div>
+            <div class="list-group-item">Avengers</div>
+            <div class="list-group-item">Jurassic Park</div>
+           
+         </div>
+        </div>
+</div>
+
+<div id="slider1_container" style="position: relative; top: 10px; left: 405px; width: 1000px; height: 300px;">
+    <!-- Slides Container -->
+    <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 600px; height: 300px;">
+        <div><img u="image" src="~/Images/m1.jpg"  /></div>
+        <div style="width:1200px;height:600px"><img u="image" src="~/Images/m8.jpg" /></div>
+        <div style="width:1200px"><img u="image" src="~/Images/m3.jpg" /></div>
+        <div style="width:1200px"><img u="image" src="~/Images/m4.jpg" /></div>
+        <div style="width:1200px"><img u="image" src="~/Images/m9.jpg" /></div>
+        <div style="width:1200px"><img u="image" src="~/Images/m6.jpg" /></div>
+        <div style="width:1200px"><img u="image" src="~/Images/m7.jpg" /></div>
+    </div>
+</div>
+
+
+
+
+    
+<div style="margin-top:-20px"></div>

@@ -1,0 +1,42 @@
+﻿@model List<eadfinal.Models.movy>
+
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>View Shedule </h1>
+
+
+
+
+    <table class="col-md-10 col-md-offset-1" style="background-color:lightblue" class="table table-responsive">
+    <tr>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Price</th>
+
+    </tr>
+
+    @foreach (var q in Model)
+    {
+
+
+        <tr>
+
+            <td>@q.movieName</td>
+            <td>@q.date</td>
+            <td>@q.time</td>
+            <td>@q.fare</td>
+
+
+        </tr>
+
+
+
+    }
+
+</table>
+
+<div style="margin-top:240px"></div>

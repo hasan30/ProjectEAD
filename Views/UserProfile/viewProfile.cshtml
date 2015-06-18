@@ -1,0 +1,36 @@
+﻿@model List<eadfinal.Models.user>
+@{
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<h1>Personal Information:</h1>
+
+
+<div class="col-md-6 col-md-offset-3"  style="background-color:lightblue;margin-top: 20px;  padding: 60px; padding-left: 100px;padding-top:10px;">
+    
+       
+       
+        <div class="pull-left"><font>Name:</font>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;</div>@Model[0].name<br /><br />
+
+        <div class="pull-left">User Name: &nbsp;</div>@Model[0].userName<br /><br />
+
+        <div class="pull-left">Password:  &nbsp; &nbsp;&nbsp;</div>@Model[0].password<br /><br />
+
+        &nbsp;<div class="pull-left">Email:&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;</div> @Model[0].email<br />
+        <br />
+
+
+        &nbsp; <div class="pull-left">
+            Age: &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
+        </div>@Model[0].age
+        <br> <br />
+
+      
+        
+
+
+</div>
+
+
+
+
+

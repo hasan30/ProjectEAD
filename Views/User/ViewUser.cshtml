@@ -1,0 +1,105 @@
+﻿@model List<eadfinal.Models.user>
+
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>view user </h1>
+
+
+
+
+<div id="check">Searching...</div>
+
+
+
+<div class="pull-left">@Html.Label("User Name") </div>
+@Html.TextBox("userId", null, new { style = "border-color:lightsteelblue;box-shadow:inherit", @class = "col-lg-offset-1 col-lg-7", id = "UserName" })<br /><br />
+<input type="button" id="b1" value="Check" />
+<div id="result"></div>
+
+@Scripts.Render("~/bundles/jquery")
+
+
+<script>
+
+    $(document).ready(function () {
+
+        $('#check').hide();
+
+        $('#b1').click(function () {
+
+            var userName = $('#UserName').val();
+
+            //alert('User Name ='+ userName);
+            $('#check').show();
+            $.getJSON("/User/searchById?UserName=" + userName, function (data) {
+                $('#check').hide();
+
+
+                $("#t1 td").remove();
+                
+                $.each(data, function (i, item) {
+                    
+                    $("#t1").append('<tr> <td >' + item.userName + '</td>' + '<td >' + item.name + '</td>' + '<td >' + item.password + '</td>' + '<td >' + item.age + '</td>' + '<td >' + item.email + '</td>' + '</tr>');
+                    
+                });
+
+
+
+
+
+
+
+
+
+            });
+
+        });
+
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="box-body table-responsive no-padding">
+    <table class="table table-hover" id="t1">
+      <tr>
+    <th>UserId</th>
+    <th>Name</th>
+    <th>Password</th>
+    
+    <th>Age</th>
+    <th>Email</th>
+</tr>
+
+@foreach (var q in Model)
+{
+
+
+    <tr>
+        <td>@q.userName</td>
+        <td>@q.name</td>
+        <td>@q.password</td>
+        
+        <td>@q.age</td>
+        <td>@q.email</td>
+
+    </tr>
+
+
+
+}
+      
+    </table>
+</div>

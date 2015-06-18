@@ -1,0 +1,104 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script> $(function () {
+     $('#date').datepicker();
+ });</script>
+
+<div style="background-image: url(/images/lg.jpg); height: 480px; width: 550px; margin-top: 0px; margin-left: 400px; padding: 60px; padding-left: 100px;padding-top:10px;">
+  @using (@Html.BeginForm("signup", "login" ))
+            {
+      
+        <h1 style="text-decoration:white"> <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</div>Sign Up</h1>
+        <br />
+
+        <div class="pull-left">@Html.Label("Name")&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;</div>@Html.TextBox("n1", null, new {style="border-color:lightsteelblue;box-shadow:inherit", @class="col-lg-offset-1 col-lg-7" })<br /><br />
+
+      
+      
+      
+      
+      
+      
+      <div id="checking">Checking...</div>
+      
+      
+        <div class="pull-left">@Html.Label("User Name:")</div>@Html.TextBox("un", null, new { style = "border-color:lightsteelblue;box-shadow:inherit", @class = "col-lg-offset-1 col-lg-7",id = "UserName" })<br /><br />
+        <input type="button" id="b1" value="Check" />
+         <div id="result"></div>
+      @Scripts.Render("~/bundles/jquery")
+      
+      
+      <script>
+
+        $(document).ready(function () {
+
+            $('#checking').hide();
+
+            $('#b1').click(function () {
+               
+                var userName = $('#UserName').val();
+
+                //alert('User Name ='+ userName);
+                $('#checking').show();
+                $.getJSON("/Home/CheckUserName?UserName=" + userName, function (data)
+                {
+                    $('#checking').hide();
+                    if (data) {
+                        $('#result').text("User already exists in database");
+                        
+                    }
+                    else {
+                        $('#result').text("User Name is available");
+                    }
+                });
+
+            });
+
+        });
+    </script>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    <div class="pull-left" >@Html.Label("password:")  &nbsp;</div>@Html.TextBox("p1", null, new {style="border-color:lightsteelblue;box-shadow:inherit", @class="col-lg-offset-1 col-lg-7" })<br /><br />
+
+        <div>&nbsp;</div>
+    <div class="pull-left">@Html.Label("Email:")&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;</div> @Html.TextBox("em", null, new {style="border-color:lightsteelblue;box-shadow:inherit",type="email" , @class="col-lg-offset-1 col-lg-7" })<br />
+    <br />
+    <div>&nbsp;</div> <div class="pull-left">
+        @Html.Label("Age:"): &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
+    </div>    @Html.TextBox("ag", null, new {style="border-color:lightsteelblue;box-shadow:inherit" , @class="col-lg-offset-1 col-lg-7" })
+    <br> <br />
+      
+     
+      
+      
+      
+      
+ @*<label>D.O.B</label><input type="text" id="date">*@    
+      
+
+
+    <input type="checkbox"><font>I agree the Terms and Conditions of the Company</font>
+    
+    <input type="submit" class="btn-default" value="Sign Up" style="margin-left:160px">
+    }
+
+
+</div>
+
+>

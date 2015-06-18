@@ -1,0 +1,50 @@
+﻿@model eadfinal.Models.ticket
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1><font color="white">Congratulations Your Ticket Is Reserved!!!! </font></h1>
+
+
+
+@*<div class="box-body table-responsive no-padding">*@
+    <table class="col-md-10 col-md-offset-1"  style="background-color:lightblue" class="table table-responsive">
+        
+        <tr>
+            <th>Name</th>
+            <th>Movie Name </th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Seat No</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+           
+       <tr> <td> </td></tr>
+        <tr> <td> </td></tr>
+        <tr> <td> </td></tr>
+
+            <tr>
+                <td>@Model.custumerName</td>
+                <td>@ViewBag.x</td>
+                <td>@ViewBag.y</td>
+                <td>@ViewBag.z</td>
+                <td>@Model.seatNo</td>
+                <td>@Model.quantity</td>
+               
+
+                <td>@Model.payment</td>
+               
+
+            </tr>
+
+
+
+        
+        
+    </table>
+    @*</div>*@
+
+
+
+<div style="margin-top:250px"></div>

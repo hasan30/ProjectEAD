@@ -1,0 +1,92 @@
+﻿@model List<eadfinal.Models.movy>
+
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h1><font color="gray" style="background-color:black"><u>Now Showing</u></font></h1>
+
+
+
+
+    <table class="col-md-10 col-md-offset-1" style="background-color:lightblue" class="table table-responsive">
+    <tr>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Price</th>
+
+    </tr>
+
+    @foreach (var q in Model)
+    {
+
+
+        <tr>
+
+            <td>@q.movieName</td>
+            <td>@q.date</td>
+            <td>@q.time</td>
+            <td>@q.fare</td>
+
+
+        </tr>
+
+
+
+    }
+
+</table>
+<div style="margin-top:240px"></div>
+
+
+
+@*<div style="height: 510px; width: 960px; margin-left: 225px; margin-top: 10px;background-color:white;padding:30px;padding-top:2px;">
+    <h3><u> Fast And Furious 7 </u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;      Release Date: 04-03-2015</h3>
+    <img src="~/images/m1.jpg" style="height:420px;width:900px;margin-top:10px">
+</div>
+
+<div style="height: 510px; width: 960px; margin-left: 225px; margin-top: 10px;background-color:white;padding:30px;padding-top:2px;">
+    <h3><u>After Earth</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;      Release Date: 05-12-2015</h3>
+    <img src="~/images/m2.jpg" style="height:420px;width:900px;margin-top:10px">
+</div>
+
+<div style="height: 510px; width: 960px; margin-left: 225px; margin-top: 10px;background-color:white;padding:30px;padding-top:2px;">
+    <h3><u>Faster</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;      Release Date: 7-07-2015</h3>
+    <img src="~/images/m3.jpg" style="height:420px;width:900px;margin-top:10px">
+</div>
+
+<div style="height: 510px; width: 960px; margin-left: 225px; margin-top: 10px;background-color:white;padding:30px;padding-top:2px;">
+    <h3><u>The House of the End of Time</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;      Release Date: 15-12-2015</h3>
+    <img src="~/images/m4.jpg" style="height:420px;width:900px;margin-top:10px">
+</div>
+
+<div style="height: 510px; width: 960px; margin-left: 225px; margin-top: 10px;background-color:white;padding:30px;padding-top:2px;">
+    <h3><u>Shooter</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;      Release Date: 04-03-2015</h3>
+    <img src="~/images/m5.jpg" style="height:420px;width:900px;margin-top:10px">
+</div>
+
+<div style="height: 510px; width: 960px; margin-left: 225px; margin-top: 10px;background-color:white;padding:30px;padding-top:2px;">
+    <h3><u>John Carter</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;      Release Date: 01-09-2015</h3>
+    <img src="~/images/m6.jpg" style="height:420px;width:900px;margin-top:10px">
+</div>
+
+<div style="height: 510px; width: 960px; margin-left: 225px; margin-top: 10px;background-color:white;padding:30px;padding-top:2px;">
+    <h3><u>Angel of Death</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;      Release Date: 12-03-2016</h3>
+    <img src="~/images/m7.jpg" style="height:420px;width:900px;margin-top:10px">
+</div>
+
+<div style="height: 510px; width: 960px; margin-left: 225px; margin-top: 10px;background-color:white;padding:30px;padding-top:2px;">
+    <h3><u>Dwayn Johnson(The Rock)</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;      Release Date: 04-03-2015</h3>
+    <img src="~/images/m8.jpg" style="height:420px;width:900px;margin-top:10px">
+</div>
+
+<div style="height: 510px; width: 960px; margin-left: 225px; margin-top: 10px;background-color:white;padding:30px;padding-top:2px;">
+    <h3><u>Divergent</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;      Release Date: 31-12-2015</h3>
+    <img src="~/images/m9.jpg" style="height:420px;width:900px;margin-top:10px">
+</div>*@
+
+
+
